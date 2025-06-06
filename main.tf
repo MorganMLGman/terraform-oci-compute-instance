@@ -164,6 +164,7 @@ resource "oci_core_instance" "instance" {
   lifecycle {
     ignore_changes = [
       metadata["ssh_authorized_keys"],
+      metadata["user_data"],
     ]
   }
 }
